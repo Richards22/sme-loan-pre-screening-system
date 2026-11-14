@@ -56,6 +56,25 @@ The main processing sequence is:
 10. Format and send the assessment email.
 11. If the AI request fails, save a failure record and send an alert.
 
+## Workflow Screenshots
+
+The following screenshots show the workflow structure and representative execution paths.
+
+### Complete workflow
+![Complete n8n workflow](screenshots/01-complete-workflow.png)
+
+### Successful execution
+![Successful workflow execution](screenshots/02-successful-execution.png)
+
+### Incomplete application handling
+![Incomplete application handling](screenshots/03-incomplete-application.png)
+
+### AI service failure handling
+![AI service failure handling](screenshots/04-ai-service-failure.png)
+
+### Duplicate detection
+![Duplicate submission detection](screenshots/05-duplicate-detection.png)
+
 ## Screening Logic
 
 The workflow uses JavaScript to validate the required inputs and calculate:
@@ -123,6 +142,11 @@ sme-loan-pre-screening-system/
 ├── workflow/
 │   └── SME-Loan-Pre-Screening-v1-GitHub.json
 ├── screenshots/
+│   ├── 01-complete-workflow.png
+│   ├── 02-successful-execution.png
+│   ├── 03-incomplete-application.png
+│   ├── 04-ai-service-failure.png
+│   └── 05-duplicate-detection.png
 ├── documentation/
 ├── test-results/
 ├── README.md
@@ -162,7 +186,7 @@ The workflow was tested using these scenarios:
 | Duplicate submission | Prevent the duplicate from proceeding through the normal assessment route |
 | AI service failure | Save a failure record and send an alert |
 
-Test evidence and detailed execution notes can be added to the `test-results/` and `screenshots/` folders.
+Screenshots above provide visual evidence of the workflow and the listed execution scenarios. Additional detailed test notes can be added to the `test-results/` folder.
 
 ## Limitations and Future Improvements
 
